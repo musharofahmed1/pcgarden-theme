@@ -1,0 +1,111 @@
+<body>
+
+  <section class="hero min-vh-100">
+    <div class="container-fluid">
+      <div class="row main-div">
+
+    <div class="col-12 col-lg-6 d-flex justify-content-center">
+
+    <div class="hero-left">
+
+
+  <span class="hero-eyebrow">{{ section.settings.eyebrow_text }}
+</span>
+
+
+  <h1 class="hero-title">
+    {{ section.settings.hero_title }}
+  </h1>
+
+  <p class="hero-text">
+    {{ section.settings.hero_description }}
+  </p>
+
+  <!-- Feature badges -->
+  <div class="hero-features">
+    <span class="feature-badge">WooCommerce</span>
+    <span class="feature-badge">Elementor</span>
+    <span class="feature-badge">Revolution Slider</span>
+  </div>
+
+  <!-- CTA -->
+  <div class="hero-cta">
+    <button class="hero-btn">
+      {{ section.settings.cta_text }}
+      <span class="hero-btn-icon">↓</span>
+    </button>
+  </div>
+
+</div>
+
+
+    </div>
+
+
+<div class="col-12 col-lg-6 d-flex  justify-content-center">
+
+  <div class="hero-right mt-3 p-5 " style="max-width: 600px;">
+
+    {% if section.settings.hero_image %}
+      <img
+        src="{{ section.settings.hero_image | image_url: width: 575 }}"
+        alt="Hero Preview"
+        class="img-fluid"
+      >
+    {% endif %}
+
+  </div>
+
+</div>
+
+
+
+
+
+
+      </div>
+    </div>
+  </section>
+
+</body>
+{% schema %}
+{
+  "name": "Hero Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow_text",
+      "label": "Eyebrow Text",
+      "default": "The Next-Generation"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_title",
+      "label": "Hero Title",
+      "default": "Pathway – WordPress\nWooCommerce Theme"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_description",
+      "label": "Hero Description",
+      "default": "You can create your website in minutes with the help of countless amazing powerful features of Pathway."
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Button Text",
+      "default": "Explore Demo"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Right Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner"
+    }
+  ]
+}
+{% endschema %}
