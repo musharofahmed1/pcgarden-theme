@@ -145,6 +145,16 @@
           "menu": "main-menu",
           "enable_search_box": false
         }
+      },
+      "pathway-hero": {
+        "type": "pathway-hero",
+        "settings": {
+          "eyebrow_text": "The Next-Generation",
+          "hero_title": "Pathway – WordPress\nWooCommerce Theme",
+          "hero_description": "You can create your website in minutes with the help of countless amazing powerful features of Pathway.",
+          "cta_text": "Explore Demo",
+          "hero_image": "shopify://shop_images/home_page_1.jpg"
+        }
       }
     },
     "content_for_index": [],
